@@ -40,7 +40,7 @@ int task03(int v, int t) {
 		return -1;
 	}
 	if (v < 0 && t != 0) {
-		return (56 + (v * t)) % 56;
+		return 56 - (-v * t % 56);
 	}
 	return (v * t) % 56;
 }

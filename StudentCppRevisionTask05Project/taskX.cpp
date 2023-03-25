@@ -20,15 +20,16 @@
 */
 
 int taskX(int h, int a, int b) {
-	int i = 0;
-	int height = 0;
-
-	while (height < h) {
-		height += a;
-		i++;
-		if (height < h) {
-			height -= b;
-		}
+	if (a < b || h < b || h < 0 || b < 0 || a < 0) {
+		return 0;
 	}
+
+	int i = 1;
+
+	for (int height = a; height < h; height += a - b) {
+		cout << i;
+		i++;
+	}
+
 	return i;
 }
